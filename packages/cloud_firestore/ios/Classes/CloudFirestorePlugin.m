@@ -150,6 +150,14 @@ static FIRQuery *getQuery(NSDictionary *arguments) {
       } else {
         // Invalid type.
       }
+    } else if ([op isEqualToString:@"in-array"]) {
+      if (fieldName != nil) {
+        query = [query queryWhereField:fieldName in:value];
+      } else if (fieldPath != nil) {
+        query = [query queryWhereFieldPath:fieldPath in:value];
+      } else {
+        // Invalid type.
+      }
     } else {
       // Unsupported operator
     }

@@ -21,7 +21,7 @@ Firestore plugin for Flutter.
   s.ios.deployment_target = '8.0'
   s.dependency 'Flutter'
   s.dependency 'Firebase/Core'
-  s.dependency 'Firebase/Firestore', '~> 6.0'
+  s.dependency 'Firebase/Firestore', '~> 6.13'
   s.static_framework = true
 
   s.prepare_command = <<-CMD
